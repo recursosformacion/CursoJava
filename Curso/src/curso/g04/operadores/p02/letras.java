@@ -12,7 +12,7 @@ public class letras {
 			if (letras[a] == preg) {
 				encontrado=true;
 				break;
-			} else
+			} 
 			//a=a*3-5;
 		}
 		System.out.println(a);

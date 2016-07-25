@@ -1,7 +1,8 @@
-package dominio;
+package curso.g10.junit0;
 
 import static org.junit.Assert.*;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import org.junit.Before;
@@ -18,7 +19,7 @@ public class DebitoTest2 extends TarjetaTest {
 		cuenta.ingresar(1000.0);
 		Date hoy = new Date();
 		long tiempo = Long.parseLong("12096000000");
-		Date fecha = new Date(hoy.getTime() + tiempo); // Caduca en 4 años
+		Calendar fecha = new Date(hoy.getTime() + tiempo); // Caduca en 4 años
 		tarjeta = new Debito("1234567890123456", "Fulano de Tal", fecha);
 		tarjeta.setCuenta(cuenta);
 	}

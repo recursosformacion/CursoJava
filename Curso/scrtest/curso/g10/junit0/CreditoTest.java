@@ -1,4 +1,4 @@
-package dominio;
+package curso.g10.junit0;
 
 import static org.junit.Assert.*;
 

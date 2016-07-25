@@ -1,4 +1,4 @@
-package dominio;
+package curso.g10.junit0;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
