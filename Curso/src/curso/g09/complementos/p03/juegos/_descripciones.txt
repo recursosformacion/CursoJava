@@ -1,0 +1,15 @@
+JugarTicTacToe
+Dentro de la clase, debera haber un método para dibujar el tablero; 
+las fichas aparecen como N para negras, y B para blancas.
+En los vertices donde no hay fichas, aparecen numeros del 1 al 9, 
+que serviran para indicar donde se quiere poner la ficha
+La version de dos jugadores, la maquina pide donde quiere poner el jugador 1
+y presenta tablero, donde quiere poner el jugador 2 y presenta tablero
+La version de un jugador, la maquina juega.
+
+Jugar poker
+Clase Mazo.
+Contiene todas las cartas y metodos para barajar, repartir,....
+Clase jugador 
+mantiene los datos de jugador, la "mano" que lleva....
+ver metodo de descarte de un jugaador que no tiene nada, por mano,.....

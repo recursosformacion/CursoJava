@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src_01_singleton01"/>
+	<classpathentry kind="src" path="src_02_Factory"/>
+	<classpathentry kind="src" path="src_03_Observer"/>
+	<classpathentry kind="src" path="src_04_Adapter"/>
+	<classpathentry kind="src" path="src_05_Strategy"/>
+	<classpathentry kind="src" path="src_06_Decorator"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

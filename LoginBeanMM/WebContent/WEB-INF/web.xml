@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>LoginBeanMM</display-name>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+    
+  </welcome-file-list>
+ 
+  <env-entry>
+    <env-entry-name>CONNECTION_URL</env-entry-name>
+    <env-entry-type>java.lang.String</env-entry-type>
+    <env-entry-value>jdbc:mysql://localhost/festivaldb</env-entry-value>
+     </env-entry>
+     <env-entry>
+    <env-entry-name>DRIVER</env-entry-name>
+    <env-entry-type>java.lang.String</env-entry-type>
+    <env-entry-value>com.mysql.jdbc.Driver</env-entry-value>
+ </env-entry>
+   <env-entry>
+    <env-entry-name>USERNAME</env-entry-name>
+    <env-entry-type>java.lang.String</env-entry-type>
+    <env-entry-value>root</env-entry-value>
+ </env-entry>
+   <env-entry>
+    <env-entry-name>PASSWORD</env-entry-name>
+    <env-entry-type>java.lang.String</env-entry-type>
+    <env-entry-value>abcd1234</env-entry-value>
+ </env-entry>
+  
+</web-app>
