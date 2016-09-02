@@ -27,12 +27,14 @@ public class GwtEventos implements EntryPoint, IGwtAcciones {
 
 	@Override
 	public void ponerFondoRojo() {
-		RootPanel.get().addStyleName("rojo");		
+		RootPanel.get().addStyleName("rojo");
+		RootPanel.get().removeStyleName("tan");		
 	}
 
 	@Override
 	public void ponerFondoNormal() {
-		RootPanel.get().removeStyleName("rojo");		
+		RootPanel.get().removeStyleName("rojo");
+		RootPanel.get().addStyleName("tan");
 	}
 
 }

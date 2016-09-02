@@ -24,7 +24,6 @@ public class GestorKeyUp implements KeyUpHandler {
 				app.ponerFondoNormal();
 			}
 		}
-
 	}
 
 }
