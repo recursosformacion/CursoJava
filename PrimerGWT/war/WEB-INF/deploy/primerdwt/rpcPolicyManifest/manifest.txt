@@ -1,0 +1,3 @@
+# Module primerdwt
+# RPC service class, partial path of RPC policy file
+es.rf.pruebasGWT.client.GreetingService, A5E417B146DEACEA2FCEC1A9F41970E3.gwt.rpc
