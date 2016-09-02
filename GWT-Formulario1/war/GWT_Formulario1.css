@@ -1,0 +1,70 @@
+
+
+.bk_red {
+    background-color: red;
+}
+.tx_red {
+    color: red;
+}
+
+.bk_green {
+	background-color: green;
+}
+.tx_green {
+	color: green;
+}
+.bk_blue {
+	background-color: blue;
+}
+.tx_blue {
+	color: blue;
+}
+
+/************************************** estilos para push-button */
+.gwt-PushButton{ 
+   color:red;   
+}
+.gwt-PushButton-up {
+   color:green;
+} 
+.gwt-PushButton-down {
+   color:blue;
+} 
+.gwt-PushButton-up-hovering {
+   color:blsck;
+} 
+.gwt-PushButton-down-hovering {
+   color:aqua;
+} 
+.gwt-PushButton-up-disabled {
+   color:lime;
+} 
+.gwt-PushButton-down-disabled {
+   color:maroon;
+} 
+/************************************** efectos para toggle button ************************************/
+.gwt-ToggleButton-up {
+   color:green;
+} 
+.gwt-ToggleButton-down {
+   color:blue;
+} 
+.gwt-ToggleButton-up-hovering {
+   color:pink;
+} 
+.gwt-ToggleButton-down-hovering {
+   color:aqua;
+} 
+.gwt-ToggleButton-up-disabled {
+   color:lime;
+} 
+.gwt-ToggleButton-down-disabled {
+   color:maroon;
+} 
+/****************************************** para checkbox */
+.gwt-CheckBox{ 
+   color:green;   
+}
+.gwt-CheckBox-disabled {
+   color:green;
+} 

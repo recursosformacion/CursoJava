@@ -1,0 +1,2 @@
+serviceClass: es.rf.pruebasGWT.client.GreetingService
+path: A5E417B146DEACEA2FCEC1A9F41970E3.gwt.rpc
