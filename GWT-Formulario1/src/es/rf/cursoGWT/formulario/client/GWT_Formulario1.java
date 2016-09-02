@@ -37,9 +37,7 @@ import es.rf.cursoGWT.formulario.client.richText.RichTextToolbar;
  */
 public class GWT_Formulario1 implements EntryPoint {
 
-	/**
-	 * This is the entry point method.
-	 */
+	
 	public void onModuleLoad() {
 		VerticalPanel vPanel = new VerticalPanel();
 		vPanel.setSpacing(20);
