@@ -1,0 +1,13 @@
+@CHARSET "ISO-8859-1";
+.rojo{
+	background-color:red;
+	}
+.correcto{
+	background-color:yellow;
+	color:red;
+	font-size:20px;
+	fborder-style:inset;
+}
+.tan{
+	background-color:aqua;
+}
