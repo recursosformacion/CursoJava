@@ -8,10 +8,10 @@ public class PopupHandler implements ClickHandler {
   public void onClick(ClickEvent event) {
     PopupPanel popup = new PopupPanel(true);
     String text = 
-      "A PopupPanel contains another widget inside.<br/>" +
-      "Here, the PopupPanel contains a VerticalPanel.<br/>" +
-      "A PopupPanel has no separate caption, and<br/>" +
-      "its size comes entirely from the widget it contains.";
+      "El PopupPanel puede contener otros widgets.<br/>" +
+      "En este caso, contiene VerticalPanel.<br/>" +
+      "El PopupPanel no tiene caption independiente, y<br/>" +
+      "el tamaño depende desu contenido.";
     Widget sampleContent = 
       new PopupSampleContentPanel(text, popup);
     popup.setWidget(sampleContent);
