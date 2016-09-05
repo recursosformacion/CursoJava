@@ -1,11 +1,11 @@
-package es.rf.pruebas.paneles.client;
+package es.rf.pruebas.paneles.client.paneles;
 
 import com.google.gwt.user.client.ui.*;
 
 public class ContentPanel extends DeckLayoutPanel {
   public ContentPanel(Widget[] panels) {
     for (Widget panel : panels) {
-      System.out.println("Añadiendo contenido a: " + panel);
+      System.out.println("Aï¿½adiendo contenido a: " + panel);
       add(panel);
     }
     showWidget(0);

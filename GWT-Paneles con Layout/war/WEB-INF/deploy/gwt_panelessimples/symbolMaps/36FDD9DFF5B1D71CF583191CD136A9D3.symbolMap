@@ -1567,8 +1567,8 @@ UmbrellaException,,com.google.web.bindery.event.shared.UmbrellaException,,com/go
 ph,com.google.web.bindery.event.shared.UmbrellaException::UmbrellaException(Ljava/util/Set;) <init>,com.google.web.bindery.event.shared.UmbrellaException,UmbrellaException,com/google/web/bindery/event/shared/UmbrellaException.java,64,0
 a,com.google.web.bindery.event.shared.UmbrellaException::causes,com.google.web.bindery.event.shared.UmbrellaException,causes,com/google/web/bindery/event/shared/UmbrellaException.java,62,-1
 qh,com.google.web.bindery.event.shared.UmbrellaException::makeMessage(Ljava/util/Set;)Ljava/lang/String;,com.google.web.bindery.event.shared.UmbrellaException,makeMessage,com/google/web/bindery/event/shared/UmbrellaException.java,39,0
-ContentPanel,,es.rf.pruebas.paneles.client.ContentPanel,,es/rf/pruebas/paneles/client/ContentPanel.java,5,-1
-sv,es.rf.pruebas.paneles.client.ContentPanel::ContentPanel([Lcom/google/gwt/user/client/ui/Widget;) <init>,es.rf.pruebas.paneles.client.ContentPanel,ContentPanel,es/rf/pruebas/paneles/client/ContentPanel.java,6,0
+ContentPanel,,es.rf.pruebas.paneles.client.paneles.ContentPanel,,es/rf/pruebas/paneles/client/ContentPanel.java,5,-1
+sv,es.rf.pruebas.paneles.client.paneles.ContentPanel::ContentPanel([Lcom/google/gwt/user/client/ui/Widget;) <init>,es.rf.pruebas.paneles.client.paneles.ContentPanel,ContentPanel,es/rf/pruebas/paneles/client/ContentPanel.java,6,0
 GWT_PanelesSimples,,es.rf.pruebas.paneles.client.GWT_PanelesSimples,,es/rf/pruebas/paneles/client/GWT_PanelesSimples.java,21,-1
 tv,es.rf.pruebas.paneles.client.GWT_PanelesSimples::$makeNavButton(Les/rf/pruebas/paneles/client/GWT_PanelesSimples;Ljava/lang/String;)Lcom/google/gwt/user/client/ui/Button;,es.rf.pruebas.paneles.client.GWT_PanelesSimples,$makeNavButton,es/rf/pruebas/paneles/client/GWT_PanelesSimples.java,63,0
 uv,es.rf.pruebas.paneles.client.GWT_PanelesSimples::$montaMenu(Les/rf/pruebas/paneles/client/GWT_PanelesSimples;)Lcom/google/gwt/user/client/ui/Panel;,es.rf.pruebas.paneles.client.GWT_PanelesSimples,$montaMenu,es/rf/pruebas/paneles/client/GWT_PanelesSimples.java,45,0

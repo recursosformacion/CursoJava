@@ -8,6 +8,7 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DeckLayoutPanel;
 import com.google.gwt.user.client.ui.DockLayoutPanel;
 import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.LayoutPanel;
 import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.SplitLayoutPanel;
@@ -29,9 +30,11 @@ public class GWT_PanelesSimples implements EntryPoint {
 
 		TabLayoutPanel tabPanel = new TabPanelExample(4);
 		StackLayoutPanel stackPanel = new StackPanelExample(5);
-		SplitLayoutPanel hSplitPanel = new HSplitPanelExample();
-		SplitLayoutPanel vSplitPanel = new VSplitPanelExample();
-		Widget[] contentWidgets = { tabPanel, stackPanel, hSplitPanel, vSplitPanel };
+		Widget hSplitPanel = new HSplitPanelExample();
+		Widget vSplitPanel = new VSplitPanelExample();
+		Widget layoutPanel = new LayoutPanelExample();
+		Widget  deckLayout= new DeckPanelExample(4);
+		Widget[] contentWidgets = { tabPanel, stackPanel, hSplitPanel, vSplitPanel, layoutPanel,deckLayout };
 
 		contentPanel = new ContentPanel(contentWidgets);
 		app.add(contentPanel);
@@ -49,7 +52,9 @@ public class GWT_PanelesSimples implements EntryPoint {
 		Button[] navButtons = { makeNavButton("Presenta TabLayoutPanel"), 
 								makeNavButton("Presenta StackLayoutPanel"),
 								makeNavButton("Presenta Horizontal SplitLayoutPanel"), 
-								makeNavButton("Presenta Vertical SplitLayoutPanel") 
+								makeNavButton("Presenta Vertical SplitLayoutPanel"),
+								makeNavButton("Presenta LayoutPanel"),
+								makeNavButton("Presenta DeckLayoutPanel") 
 				};
 		for (int i = 0; i < navButtons.length; i++) {
 			Button button = navButtons[i];
