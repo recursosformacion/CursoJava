@@ -1,0 +1,29 @@
+.center-block {
+	text-align: center;
+}
+
+.nav-panel {
+	height: 380.0px;
+	padding-top: 15.0px;
+	border-top: 1.0px solid black;
+	border-bottom: 1.0px solid black;
+}
+
+.nav-button {
+	width: 130.0px;
+	height: 50.0px;
+	margin: 5.0px !important;
+}
+
+.tab-panel,.stack-panel,.split-panel, .layout-panel {
+	margin-bottom: 25.0px;
+	margin-right: 20.0px;
+}
+
+.split-panel,.layout-panel {
+border: 1px solid #CCC;
+}
+
+.opaco {
+	background-color:white;
+}
