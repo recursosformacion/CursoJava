@@ -1,0 +1,2 @@
+serviceClass: coreservlets.client.BankService
+path: 9BE2D8090A0401FB788D84F6692EDB31.gwt.rpc
