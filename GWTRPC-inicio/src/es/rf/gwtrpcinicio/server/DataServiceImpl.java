@@ -9,6 +9,10 @@ import es.rf.gwtrpcinicio.shared.RandomNumber;
 public class DataServiceImpl extends RemoteServiceServlet implements DataService {
 
 	public String getButton1Data() {
+		try {										
+			Thread.sleep(4000);							//simulacion de proceso largo
+		} catch (InterruptedException e) {
+		}
 		String result = String.format("Numero: %.2f", Math.random() * 10);
 		return (result);
 	}

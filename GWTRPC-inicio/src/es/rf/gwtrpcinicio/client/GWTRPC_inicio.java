@@ -66,6 +66,8 @@ public class GWTRPC_inicio implements EntryPoint {
 	// ****************************Tratamiento boton 1
 	private class Button1Handler implements ClickHandler {
 		public void onClick(ClickEvent event) {
+			
+			label1.setHTML("<h1><i>Loading...</i></h1>");
 			serviceProxy.getButton1Data(new Button1Callback());
 		}
 	}
