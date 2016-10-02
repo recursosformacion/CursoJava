@@ -15,18 +15,18 @@ public class Credito extends Tarjeta {
 
 	public void retirar(double x) throws Exception {
 		Movimiento m = new Movimiento();
-		m.setConcepto("Retirada en cajero automático");
-		x = (x * 0.05 < 3.0 ? 3 : x * 0.05); // Añadimos una comisión de un 5%,
-												// mínimo de 3 euros.
+		m.setConcepto("Retirada en cajero automatico");
+		x = (x * 0.05 < 3.0 ? 3 : x * 0.05); // AÃ±adimos una comision de un 5%,
+												// minimo de 3 euros.
 		m.setImporte(x);
 		mMovimientos.addElement(m);
 		if (x > getCreditoDisponible())
-			throw new Exception("Crédito insuficiente");
+			throw new Exception("Credito insuficiente");
 	}
 
 	public void ingresar(double x) throws Exception {
 		Movimiento m = new Movimiento();
-		m.setConcepto("Ingreso en cuenta asociada (cajero automático)");
+		m.setConcepto("Ingreso en cuenta asociada (cajero automatico)");
 		m.setImporte(x);
 		mMovimientos.addElement(m);
 		mCuentaAsociada.ingresar(x);
@@ -34,7 +34,7 @@ public class Credito extends Tarjeta {
 
 	public void pagoEnEstablecimiento(String datos, double x) throws Exception {
 		Movimiento m = new Movimiento();
-		m.setConcepto("Compra a crédito en: " + datos);
+		m.setConcepto("Compra a credito en: " + datos);
 		m.setImporte(x);
 		mMovimientos.addElement(m);
 	}
@@ -52,14 +52,14 @@ public class Credito extends Tarjeta {
 		return mCredito - getSaldo();
 	}
 
-	public void liquidar(int mes, int año) {
+	public void liquidar(int mes, int anno) {
 		Movimiento liq = new Movimiento();
 
-		liq.setConcepto("Liquidación de operaciones tarj. crédito, " + (mes + 1) + " de " + (año + 1900));
+		liq.setConcepto("Liquidacion de operaciones tarj. credito, " + (mes + 1) + " de " + (anno + 1900));
 		double r = 0.0;
 		for (int i = 0; i < this.mMovimientos.size(); i++) {
 			Movimiento m = (Movimiento) mMovimientos.elementAt(i);
-			if (m.getFecha().get(Calendar.MONTH) + 1 == mes && m.getFecha().get(Calendar.YEAR) == año) {
+			if (m.getFecha().get(Calendar.MONTH) + 1 == mes && m.getFecha().get(Calendar.YEAR) == anno) {
 				r += m.getImporte();
 				mMovimientos.remove(i);
 			}
