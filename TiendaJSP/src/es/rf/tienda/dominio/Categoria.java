@@ -1,23 +1,30 @@
 package es.rf.tienda.dominio;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import es.rf.tienda.util.Validator;
 
-/**
- * 
- * Nombre		Categoria
- * Descripcion	Lista de categorías
- * @author 		Miguel Garcia
- * @version		13 de abr. de 2016
- *
- */
-public class Categoria {
-	
+@SuppressWarnings("serial")
+@Entity
+@Table(schema = "ALUMNO")
+public class Categoria implements Serializable  {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.TABLE)
 	private int id_categoria;			//identificador categoria
-	
+
+	@Column(name = "Titulo_Categoria")
 	private String cat_nombre;			//nombre de la categoria
 	
+	@Column(name = "Descripcion_Categoria")
 	private String cat_descripcion;		//descripcion de la categoria
-	
 	
 	public Categoria(){}
 	
@@ -74,8 +81,6 @@ public class Categoria {
 	public void setCat_descripcion(String cat_descripcion) {
 		this.cat_descripcion = cat_descripcion;
 	}
-<<<<<<< HEAD
-=======
 
 
 	@Override
@@ -112,7 +117,6 @@ public class Categoria {
 			return false;
 		return true;
 	}
->>>>>>> refs/remotes/origin/master
 	
 	
 }
