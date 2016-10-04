@@ -8,12 +8,7 @@ public class CategoriaTest {
 
 	@Test
 	public void testIsValid() {
-<<<<<<< HEAD
 			}
-=======
-		fail("Not yet implemented");
-	}
->>>>>>> refs/remotes/origin/master
 
 	@Test
 	public void testSetId_categoria() {

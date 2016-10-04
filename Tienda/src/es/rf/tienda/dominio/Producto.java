@@ -24,7 +24,6 @@ public class Producto {
 	private int pro_stkReservado;
 	private int pro_nStkAlto;
 	private int pro_nStkBajo;
-<<<<<<< HEAD
 	private byte pro_stat;
 
 	/**
@@ -140,123 +139,6 @@ public class Producto {
 	}
 
 	public byte getPro_stat() {
-=======
-	private char pro_stat;
-
-	/**
-	 * Longitud codigo de producto
-	 */
-	public static final int ID_PRODUCTO_LONG = 5;
-	/**
-	 * Longitud descripcion
-	 * 
-	 */
-	public static final int PRO_DESCRIPCION_LONG_MIN = 5;
-	public static final int PRO_DESCRIPCION_LONG_MAX = 100;
-
-	/**
-	 * Longitud descripcion larga
-	 * 
-	 */
-	public static final int PRO_DESLARGA_LONG_MIN = 5;
-	public static final int PRO_DESLARGA_LONG_MAX = 2000;
-
-	/**
-	 * Filtro precio
-	 * 
-	 */
-	public static final int PRO_PRECIO_VAL_MIN = 0;
-	public static final int PRO_PRECIO_VAL_MAX = 100;
-
-	/**
-	 * Filtro precio
-	 * 
-	 */
-	public static final int PRO_UNIVENTA_LONG_MIN = 0;
-	public static final int PRO_UNIVENTA_LONG_MAX = 10;
-
-	/**
-	 * Longitud uso recomendado
-	 * 
-	 */
-	public static final int PRO_USORECOMENDADO_LONG_MIN = 5;
-	public static final int PRO_USORECOMENDADO_LONG_MAX = 2000;
-
-	/**
-	 * GETTERS de campos
-	 * 
-	 */
-
-	public String getId_producto() {
-		return id_producto;
-	}
-
-	public String getPro_descripcion() {
-		return pro_descripcion;
-	}
-
-	public String getPro_desLarga() {
-		return pro_desLarga;
-	}
-
-	public Double getPro_precio() {
-		return pro_precio;
-	}
-
-	public int getPro_stock() {
-		return pro_stock;
-	}
-
-	public Calendar getPro_fecRepos() {
-		return pro_fecRepos;
-	}
-
-	public Calendar getPro_fecActi() {
-		return pro_fecActi;
-	}
-
-	public Calendar getPro_fecDesacti() {
-		return pro_fecDesacti;
-	}
-
-	public String getPro_uniVenta() {
-		return pro_uniVenta;
-	}
-
-	public Double getPro_cantXUniVenta() {
-		return pro_cantXUniVenta;
-	}
-
-	public String getPro_uniUltNivel() {
-		return pro_uniUltNivel;
-	}
-
-	public int getId_pais() {
-		return id_pais;
-	}
-
-	public String getPro_usoRecomendado() {
-		return pro_usoRecomendado;
-	}
-
-	public int getId_categoria() {
-		return id_categoria;
-	}
-
-	public int getPro_stkReservado() {
-		return pro_stkReservado;
-	}
-
-	public int getPro_nStkAlto() {
-		return pro_nStkAlto;
-	}
-
-	public int getPro_nStkBajo() {
-		return pro_nStkBajo;
-	}
-
-	public char getPro_stat() {
->>>>>>> refs/remotes/origin/master
 		return pro_stat;
 	}
 
