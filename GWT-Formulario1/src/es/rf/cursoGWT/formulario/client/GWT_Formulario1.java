@@ -48,21 +48,21 @@ public class GWT_Formulario1 implements EntryPoint {
 
 		VerticalPanel panel = new VerticalPanel();
 		panel.setSpacing(10);
-		panel.add(new HTML("<p>Los botones<br><p>"));
+		panel.add(new HTML("<p>Los botones<br></p>"));
 		createButtons(panel);
-		panel.add(new HTML("<p>&nbsp;<p>"));
+		panel.add(new HTML("<p>&nbsp;</p>"));
 		hPanel.add(panel);
 
 		VerticalPanel panel1 = new VerticalPanel();
 		panel1.setSpacing(10);
-		panel1.add(new HTML("<p>Push Buttons<br>Con efectos over<p>"));
+		panel1.add(new HTML("<p>Push Buttons<br>Con efectos over</p>"));
 		createPushButtons(panel1);
 		panel1.add(new HTML("<p>&nbsp;<p>"));
 		hPanel.add(panel1);
 
 		VerticalPanel panel2 = new VerticalPanel();
 		panel2.setSpacing(10);
-		panel2.add(new HTML("<p>toggle Buttons<br><p>"));
+		panel2.add(new HTML("<p>toggle Buttons<br></p>"));
 		createToggleButtons(panel2);
 		panel2.add(new HTML("<p>&nbsp;<p>"));
 		hPanel.add(panel2);
@@ -260,7 +260,7 @@ public class GWT_Formulario1 implements EntryPoint {
 			@Override
 			public void onClick(ClickEvent event) {
 				CheckBox checkBox = (CheckBox) event.getSource();
-				Window.alert("CheckBox est· " + (checkBox.getValue() ? "marcado" : "no marcado"));
+				Window.alert("CheckBox est√° " + (checkBox.getValue() ? "marcado" : "no marcado"));
 			}
 		});
 
@@ -301,8 +301,9 @@ public class GWT_Formulario1 implements EntryPoint {
 	      listBox1.addChangeHandler(new ChangeHandler() {
 			@Override
 			public void onChange(ChangeEvent event) {
-				int seleccionado=listBox1.getSelectedIndex();
-				String txtSeleccionado=listBox1.getItemText(seleccionado);
+				ListBox mio = (ListBox) event.getSource();
+				int seleccionado=mio.getSelectedIndex();
+				String txtSeleccionado=mio.getItemText(seleccionado);
 				Window.alert("Se selecciono "+ txtSeleccionado + " que es el elemento " + seleccionado);
 				
 			}
