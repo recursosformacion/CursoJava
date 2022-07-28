@@ -14,11 +14,13 @@ public class ValidatorTest {
 	public final static String COD_PRODUCTO_NUMERICO = "12345";
 	public final static String COD_PRODUCTO_ALFA = "ABCDE";
 	public final static String COD_PRODUCTO_NO_ALFA = "ABCDE";
+	public final static String COD_PRODUCTO_INVER = "123AB";
+	public final static String COD_PRODUCTO_MINUS = "ab123";
 	public final static String COD_PRODUCTO_OK = "AB123";
 
 	// ************Cadenas alfanumericas **********************//
 	public final static String TEXTO_ALFANUMERICO_ERRONEO = "lkjd salkas jlask daskla$&%";
-	public final static String TEXTO_ALFANUMERICO_OK = "lkjd salkas jlask daskla";
+	public final static String TEXTO_ALFANUMERICO_OK = "Menuda cadena alfanumerica";
 
 	// ********** PHONE NUMBER*******************************//
 	final static String PHONENUMBER_OK = "123 456 789 01";
@@ -48,6 +50,21 @@ public class ValidatorTest {
 	public final static String DNI_ERROR_FORMATO = "38474364X";
 	public final static String DNI_ERROR_FORMATO_LETRAS = "38.A7A.364-X";
 	
+	//*******************PASSWORDS**********************************//
+	/* Debe tener entre 8 y 12 caracteres
+	*  Debe contener, como mínimo, una letra mayúscula, una letra minúscula, y un carácter especial
+	*  El nombre de usuario no puede formar parte de la contraseña*/
+	
+	public static final String USUARIO = "miguel";
+	public static final String PASSWORD_OK =  "Aa@12345";
+	public static final String PASSWORD_OK1 = "Aa@456789012";
+	public static final String PASSWORD_ER1 = "Aa3456789012";
+	public static final String PASSWORD_ER2 = "A2@456789012";
+	public static final String PASSWORD_ER3 = "1a@456789012";
+	public static final String PASSWORD_ER4 = "Aa@4567890123";
+	public static final String PASSWORD_ER5 = "A2@4567";
+	public static final String PASSWORD_ER6 = "A2@miguel012";
+	
 	//****************Fechas logicas**************************//
 	public final static String FECHA_LOGICA_OK = "01/10/2016";
 	public final static String FECHA_LOGICA_OK1 = "29/02/2016";
@@ -63,11 +80,24 @@ public class ValidatorTest {
 	public final static String FECHA_LOGICA_ERRMES2 = "01/1a/2016";
 	public final static String FECHA_LOGICA_ERRANY = "01/10/0000";
 	public final static String FECHA_LOGICA_ERRANY2 = "01/10/9999";
+	public static final String FECHA_ERR_ANO_CERO = "10/02/0000";
+	public static final String FECHA_OK_BISIESTO = "29/02/2004";
+	public static final String FECHA_OK_BISIESTO_2000 = "29/02/2000";
+	public static final String FECHA_OK_INICIO = "01/01/2017";
+	public static final String FECHA_OK_FIN = "31/12/2017";
+	
+	/****************************RANGO********************************/
+	private static final double VALOR = 50;
+	private static final int RANGO_MAX = 100;
+	private static final int RANGO_MIN = 1;
+	private static final double VALOR_MAX = 101;
+	private static final double VALOR_MIN = 0;
 	
 	// ***************Fechas **************************
 	public static Calendar DIA_ANTERIOR;
 	public static Calendar DIA_POSTERIOR;
 	public static Calendar DIA_ACTUAL;
+	
 	static {
 		Calendar aux = Calendar.getInstance();
 		aux.add(Calendar.DAY_OF_YEAR, -1);
@@ -86,32 +116,32 @@ public class ValidatorTest {
 	}
 
 	@Test
-	public void testIsCodigoProducto0() {
+	public void testIsCodigoProductoNULL() {
 		assertFalse(Validator.isCodigoProducto(null));
 	}
 
 	@Test
-	public void testIsCodigoProducto00() {
+	public void testIsCodigoProductoVACIO() {
 		assertFalse(Validator.isCodigoProducto(""));
 	}
 
 	@Test
-	public void testIsCodigoProducto1() {
+	public void testIsCodigoProductoLARGO() {
 		assertFalse(Validator.isCodigoProducto(COD_PRODUCTO_LARGO));
 	}
 
 	@Test
-	public void testIsCodigoProducto2() {
+	public void testIsCodigoProductoSoloNumeros() {
 		assertFalse(Validator.isCodigoProducto(COD_PRODUCTO_NUMERICO));
 	}
 
 	@Test
-	public void testIsCodigoProducto3() {
+	public void testIsCodigoProductoSoloLetras() {
 		assertFalse(Validator.isCodigoProducto(COD_PRODUCTO_ALFA));
 	}
 
 	@Test
-	public void testIsCodigoProducto4() {
+	public void testIsCodigoProductoOK() {
 		assertTrue(Validator.isCodigoProducto(COD_PRODUCTO_OK));
 	}
 
@@ -119,6 +149,16 @@ public class ValidatorTest {
 	public void testIsCodigoProducto5() {
 		assertFalse(Validator.isCodigoProducto(COD_PRODUCTO_NO_ALFA));
 	}
+	@Test
+	public void testIsCodigoProductoMinusculas() {
+		assertFalse(Validator.isCodigoProducto(COD_PRODUCTO_MINUS));
+	}
+	@Test
+	public void testIsCodigoProductoFormato() {
+		assertFalse(Validator.isCodigoProducto(COD_PRODUCTO_INVER));
+	}
+	
+	
 
 	@Test
 	public void testIsAlfanumeric() {
@@ -132,19 +172,19 @@ public class ValidatorTest {
 
 	@Test
 	public void testIsVacio() {
-		assertTrue(Validator.isCodigoProducto(null));
+		assertTrue(Validator.isVacio(null));
 	}
 
 	@Test
 	public void testIsVacio1() {
-		assertTrue(Validator.isCodigoProducto(""));
+		assertTrue(Validator.isVacio(""));
 	}
 
 	@Test
 	public void testIsVacio2() {
-		assertFalse(Validator.isCodigoProducto(" "));
+		assertFalse(Validator.isVacio(" "));
 	}
-
+/*
 	@Test
 	public void testCumplePhoneNumber() {
 		assertTrue(Validator.cumplePhoneNumber(PHONENUMBER_OK));
@@ -179,7 +219,7 @@ public class ValidatorTest {
 	public void testCumplePhoneNumber4() {
 		assertFalse(Validator.cumplePhoneNumber(PHONENUMBER_LARGO));
 	}
-
+*/
 	@Test
 	public void testIsEmailValido() {
 		assertTrue(Validator.isEmailValido(MAIL_VALIDO));
@@ -285,34 +325,60 @@ public class ValidatorTest {
 		assertFalse(Validator.cumpleDNI(DNI_ERROR_SIN_LETRA1));
 	}
 
-	@Test
-	public void testCumpleRangoIntIntInt() {
-		fail("Not yet implemented");
-	}
+	
 
 	@Test
-	public void testCumpleRangoDoubleIntInt() {
-		fail("Not yet implemented");
+	public void testCumpleRango() {
+		assertTrue(Validator.cumpleRango(VALOR, RANGO_MIN, RANGO_MAX));
+	}
+	@Test
+	public void testCumpleRangoERRMAX() {
+		assertFalse(Validator.cumpleRango(VALOR_MAX, RANGO_MIN, RANGO_MAX));
+	}
+	@Test
+	public void testCumpleRangoERRMIN() {
+		assertFalse(Validator.cumpleRango(VALOR_MIN, RANGO_MIN, RANGO_MAX));
 	}
 
 	@Test
 	public void testCumpleLongitudMin() {
-		fail("Not yet implemented");
+		assertTrue(Validator.cumpleLongitudMin(TEXTO_ALFANUMERICO_OK , TEXTO_ALFANUMERICO_OK.length()));
+	}
+	@Test
+	public void testCumpleLongitudMin1() {
+		assertTrue(Validator.cumpleLongitudMin(TEXTO_ALFANUMERICO_OK , TEXTO_ALFANUMERICO_OK.length()-1));
+	}
+	@Test
+	public void testCumpleLongitudMinER() {
+		assertFalse(Validator.cumpleLongitudMin(TEXTO_ALFANUMERICO_OK , TEXTO_ALFANUMERICO_OK.length()+1));
 	}
 
 	@Test
 	public void testCumpleLongitudMax() {
-		fail("Not yet implemented");
+		assertTrue(Validator.cumpleLongitudMax(TEXTO_ALFANUMERICO_OK , TEXTO_ALFANUMERICO_OK.length()+1));
 	}
+	@Test
+	public void testCumpleLongitudMax1() {
+		assertTrue(Validator.cumpleLongitudMax(TEXTO_ALFANUMERICO_OK , TEXTO_ALFANUMERICO_OK.length()));
+	}
+	@Test
+	public void testCumpleLongitudMaxERR() {
+		assertFalse(Validator.cumpleLongitudMax(TEXTO_ALFANUMERICO_OK , TEXTO_ALFANUMERICO_OK.length()-1));
+	}
+
 
 	@Test
 	public void testCumpleLongitud() {
-		fail("Not yet implemented");
+		assertTrue(Validator.cumpleLongitud(TEXTO_ALFANUMERICO_OK , TEXTO_ALFANUMERICO_OK .length()-1, TEXTO_ALFANUMERICO_OK .length()+1));
 	}
 
 	@Test
 	public void testValDateMin() {
-		fail("Not yet implemented");
+		assertTrue(Validator.valDateMin(DIA_POSTERIOR, DIA_ACTUAL));
+	}
+	@Test
+	public void testValDateMinERR() {
+		assertTrue(Validator.valDateMin(DIA_POSTERIOR, DIA_POSTERIOR));
 	}
 
 	@Test
@@ -321,7 +387,7 @@ public class ValidatorTest {
 	}
 	@Test
 	public void testValDateMax0() {
-		assertTrue(Validator.valDateMax(null, null));
+		assertFalse(Validator.valDateMax(null, null));
 	}
 
 	@Test
@@ -330,15 +396,15 @@ public class ValidatorTest {
 	}
 	
 	@Test
-	public void testEsFechaValida() {
+	public void testEsFechaValidaOK() {
 		assertTrue(Validator.esFechaValida(FECHA_LOGICA_OK));
 	}
 	@Test
-	public void testEsFechaValida0() {
+	public void testEsFechaValidaNULL() {
 		assertFalse(Validator.esFechaValida(null));
 	}
 	@Test
-	public void testEsFechaValida00() {
+	public void testEsFechaValidaVACIO() {
 		assertFalse(Validator.esFechaValida(""));
 	}
 
@@ -348,7 +414,7 @@ public class ValidatorTest {
 	}
 	@Test
 	public void testEsFechaValida2() {
-		assertFalse(Validator.esFechaValida(FECHA_LOGICA_ERRANY2));
+		assertTrue(Validator.esFechaValida(FECHA_LOGICA_ERRANY2));
 	}
 	@Test
 	public void testEsFechaValida3() {
@@ -386,10 +452,55 @@ public class ValidatorTest {
 	public void testEsFechaValida11() {
 		assertFalse(Validator.esFechaValida(FECHA_LOGICA_ERRMES2));
 	}
+	@Test
+	public void testEsFechaValidaBisiesto() {
+		assertTrue(Validator.esFechaValida(FECHA_OK_BISIESTO));
+	}
+	@Test
+	public void testEsFechaValidaBisiesto2000() {
+		assertTrue(Validator.esFechaValida(FECHA_OK_BISIESTO_2000));
+	}
+	@Test
+	public void testEsFechaValidaInicio() {
+		assertTrue(Validator.esFechaValida(FECHA_OK_INICIO));
+	}
+	@Test
+	public void testEsFechaValidaFin() {
+		assertTrue(Validator.esFechaValida(FECHA_OK_FIN));
+	}	
 	
 	@Test
 	public void testEsPasswordValida() {
-		fail("Not yet implemented");
+		assertTrue(Validator.esPasswordValida(USUARIO, PASSWORD_OK));
 	}
+	@Test
+	public void testEsPasswordValida1() {
+		assertTrue(Validator.esPasswordValida(USUARIO, PASSWORD_OK1));
+	}
+	@Test
+	public void testEsPasswordValidaEr1() {
+		assertFalse(Validator.esPasswordValida(USUARIO, PASSWORD_ER1));
+	}
+	@Test
+	public void testEsPasswordValidaEr2() {
+		assertFalse(Validator.esPasswordValida(USUARIO, PASSWORD_ER2));
+	}
+	@Test
+	public void testEsPasswordValidaEr3() {
+		assertFalse(Validator.esPasswordValida(USUARIO, PASSWORD_ER3));
+	}
+	@Test
+	public void testEsPasswordValidaEr4() {
+		assertFalse(Validator.esPasswordValida(USUARIO, PASSWORD_ER4));
+	}
+	@Test
+	public void testEsPasswordValidaEr5() {
+		assertFalse(Validator.esPasswordValida(USUARIO, PASSWORD_ER5));
+	}
+	@Test
+	public void testEsPasswordValidaEr6() {
+		assertFalse(Validator.esPasswordValida(USUARIO, PASSWORD_ER6));
+	}
+	
 
 }

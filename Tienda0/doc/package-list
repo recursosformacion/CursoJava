@@ -1,0 +1,5 @@
+es.rf.tienda.dominio
+es.rf.tienda.exception
+es.rf.tienda.interfaces.daos
+es.rf.tienda.objetos.daos
+es.rf.tienda.util

@@ -2,28 +2,22 @@ package es.rf.tienda.dominio;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-
 import es.rf.tienda.util.Validator;
 
-@SuppressWarnings("serial")
+
 @Entity
-@Table(schema = "ALUMNO")
 public class Categoria implements Serializable  {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE)
 	private int id_categoria;			//identificador categoria
 
-	@Column(name = "Titulo_Categoria")
 	private String cat_nombre;			//nombre de la categoria
 	
-	@Column(name = "Descripcion_Categoria")
 	private String cat_descripcion;		//descripcion de la categoria
 	
 	public Categoria(){}

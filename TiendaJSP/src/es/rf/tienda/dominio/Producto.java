@@ -2,8 +2,6 @@ package es.rf.tienda.dominio;
 
 import java.io.Serializable;
 import java.util.Calendar;
-import java.util.Date;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -23,7 +21,7 @@ import es.rf.tienda.util.Validator;
 public class Producto implements Serializable {
 
 	@Id
-	private String id_producto; // Código de producto
+	private String id_producto; // Cï¿½digo de producto
 	private String pro_descripcion; // Descripcion corta
 	private String pro_desLarga; // Explicacion
 	private Double pro_precio;

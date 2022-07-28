@@ -1,13 +1,23 @@
 package es.rf.tienda.dominio;
 
-import java.util.Date;
+import java.util.Calendar;
+
+
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
 import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Column;
 
+
+@Entity
 public class Usuario {
+	@Id
+	@GeneratedValue(strategy= GenerationType.AUTO)
 	private int id_usuario; // identificador de usuario
 
 	private String user_nombre; // nombre de usuario
@@ -20,9 +30,9 @@ public class Usuario {
 
 	private String user_dni; // DNI del usuario
 
-	private Date user_fecAlta; // Fecha alta
+	private Calendar user_fecAlta; // Fecha alta
 
-	private Date user_fecConfirmacion; // Fecha en que confirma el correo
+	private Calendar user_fecConfirmacion; // Fecha en que confirma el correo
 
 	@Embedded
 	@AttributeOverrides({ 
@@ -32,7 +42,7 @@ public class Usuario {
 			@AttributeOverride(name = "dir_cPostal", column = @Column(name = "cPostalEnvio")),
 			@AttributeOverride(name = "dir_provincia", column = @Column(name = "provinciaEnvio")),
 			@AttributeOverride(name = "dir_correoE", column = @Column(name = "correoEEnvio")),
-			@AttributeOverride(name = "dir_pais", column = @Column(name = "paisEnvio")), })
+			@AttributeOverride(name = "id_pais", column = @Column(name = "paisEnvio")), })
 	private Direccion user_envio; // Datos direccion de envio
 
 	@Embedded
@@ -43,7 +53,7 @@ public class Usuario {
 			@AttributeOverride(name = "dir_cPostal", column = @Column(name = "cPostalFactura")),
 			@AttributeOverride(name = "dir_provincia", column = @Column(name = "provinciaFactura")),
 			@AttributeOverride(name = "dir_correoE", column = @Column(name = "correoEFactura")),
-			@AttributeOverride(name = "dir_pais", column = @Column(name = "paisFactura")), })
+			@AttributeOverride(name = "id_pais", column = @Column(name = "paisFactura")), })
 	private Direccion user_pago; // Datos direccion de pago
 
 	/**
@@ -139,7 +149,7 @@ public class Usuario {
 	/**
 	 * @return el user_fecAlta
 	 */
-	public Date getUser_fecAlta() {
+	public Calendar getUser_fecAlta() {
 		return user_fecAlta;
 	}
 
@@ -147,14 +157,14 @@ public class Usuario {
 	 * @param user_fecAlta
 	 *            el user_fecAlta a establecer
 	 */
-	public void setUser_fecAlta(Date user_fecAlta) {
+	public void setUser_fecAlta(Calendar user_fecAlta) {
 		this.user_fecAlta = user_fecAlta;
 	}
 
 	/**
 	 * @return el user_fecConfirmacion
 	 */
-	public Date getUser_fecConfirmacion() {
+	public Calendar getUser_fecConfirmacion() {
 		return user_fecConfirmacion;
 	}
 
@@ -162,7 +172,7 @@ public class Usuario {
 	 * @param user_fecConfirmacion
 	 *            el user_fecConfirmacion a establecer
 	 */
-	public void setUser_fecConfirmacion(Date user_fecConfirmacion) {
+	public void setUser_fecConfirmacion(Calendar user_fecConfirmacion) {
 		this.user_fecConfirmacion = user_fecConfirmacion;
 	}
 

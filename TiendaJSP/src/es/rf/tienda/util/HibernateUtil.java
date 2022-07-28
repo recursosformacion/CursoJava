@@ -28,11 +28,7 @@ public class HibernateUtil {
 		
 	public static Session getSession() throws HibernateException {
 		Session ss= sessionFactory.openSession();
-				 Object metodo=ss.getClass().getMethod("save");
-					 o.isValid();
-					 this.save(o);
-					 
-				 }
+				 
 		return sessionFactory.openSession();
 	}
 

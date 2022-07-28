@@ -10,6 +10,7 @@ import org.junit.Test;
 
 import es.rf.tienda.dominio.Categoria;
 import es.rf.tienda.exception.DAOException;
+import es.rf.tienda.exception.DomainException;
 import es.rf.tienda.util.RFDataConnection;
 
 public class testCategoriaDao {
@@ -30,8 +31,8 @@ public class testCategoriaDao {
 	}
 	
 	@Test
-	public void testLeerTodos() throws DAOException {
-		List<Categoria> lista= cDAO.leerTodos();
+	public void testLeerTodos() throws DAOException, DomainException {
+		List<Categoria> lista= cDAO.listarTodos();
 		assertTrue("Lista todo", lista.size()>0);
 		
 	}
@@ -55,9 +56,9 @@ public class testCategoriaDao {
 	public void testInsertarRegistro() throws DAOException {
 		
 		
-		cDAO.insertarRegistro(reg1);
+		cDAO.guardar(reg1);
 		RFDataConnection.commit();
-		cDAO.insertarRegistro(reg2);
+		cDAO.guardar(reg2);
 		RFDataConnection.commit();
 		
 	}
