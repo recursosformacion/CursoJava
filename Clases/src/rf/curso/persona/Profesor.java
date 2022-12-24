@@ -4,6 +4,7 @@ public class Profesor extends Persona {
 
 	private float salario;
 	private String fecContratacion;
+	private test
 
 	// Constructor
 	public Profesor(String codPersona, String nombre, int edad, String telContacto, float salario,
@@ -30,7 +31,7 @@ public class Profesor extends Persona {
 		this.fecContratacion = fecContratacion;
 	}
 
-	// Métodos
+	// MÃ©todos
 	public void mostrar() {
 		System.out.println("Profesor: " + getNombre() + "\n Salario: " + salario + "\n FecContratacion: "
 				+ fecContratacion + "\n");
