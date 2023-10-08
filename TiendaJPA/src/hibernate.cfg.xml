@@ -10,7 +10,7 @@
         <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
         <property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
         <property name="connection.username">alumno</property>
-        <property name="connection.password">Curso201605</property>
+        <property name="connection.password">curso</property>
 
         <!-- SQL dialect -->
         <property name="dialect">org.hibernate.dialect.OracleDialect</property>
@@ -32,9 +32,10 @@
  
         
         <mapping class="es.rf.tienda.dominio.Categoria"/>
-        
         <mapping class="es.rf.tienda.dominio.Producto"/>
         <mapping class="es.rf.tienda.dominio.Usuario"/>
+        <mapping class="es.rf.tienda.dominio.Pais"/>
+        
 	</session-factory>
 
 </hibernate-configuration>

@@ -23,9 +23,11 @@
 		</tr>
 	</table>
 	<h1>Lista de usuarios</h1>
-	<% UserMio ele; 
+	<% 
+	UserMio ele; 
 		ArrayList<UserMio> lista = (ArrayList<UserMio>) session.getAttribute("lista");
 		for (ele : lista) {
+		}
 	%>
 	<tr>
 		<td><%=ele,getNombre() %></td>

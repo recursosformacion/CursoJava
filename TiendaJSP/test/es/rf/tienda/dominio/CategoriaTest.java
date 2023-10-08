@@ -2,28 +2,68 @@ package es.rf.tienda.dominio;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
-public class CategoriaTest {
+import es.rf.tienda.exception.DomainException;
 
+public class CategoriaTest {
+	Categoria cat;
+	final int ID_CATEGORIA=1;
+	final String CAT_NOMBRE="Incienso";
+	final String CAT_DESCRIPCION="Barritas de incienso de 20 centimetros ";
+	
+	final int ID_CATEGORIA_2=2;
+	final String CAT_NOMBRE_2="Conos";
+	final String CAT_NOMBRE_2_CORTO="Con";
+	final String CAT_NOMBRE_2_LARGO="Conos jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj";
+	final String CAT_DESCRIPCION_2="Conos de incienso de 10 gramos";
+	
+	@Before
+	public void inicio() throws DomainException{
+		cat=new Categoria();
+		cat.setId_categoria(ID_CATEGORIA);
+		cat.setCat_nombre(CAT_NOMBRE);
+		cat.setCat_descripcion(CAT_DESCRIPCION);
+	}
+	@Test
+	public void testIsValidNO() {
+		cat=new Categoria();
+		assertFalse(cat.isValid());
+	}
 	@Test
 	public void testIsValid() {
-		fail("Not yet implemented");
+		assertTrue(cat.isValid());
 	}
-
+	
 	@Test
 	public void testSetId_categoria() {
-		fail("Not yet implemented");
+		cat.setId_categoria(ID_CATEGORIA_2);
+		assertEquals(ID_CATEGORIA_2, cat.getId_categoria());
 	}
 
 	@Test
-	public void testSetCat_nombre() {
-		fail("Not yet implemented");
+	public void testSetCat_nombre() throws DomainException {
+		cat.setCat_nombre(CAT_NOMBRE_2);
+		assertEquals(CAT_NOMBRE_2, cat.getCat_nombre());
 	}
-
+	
+	@Test (expected=DomainException.class)
+	public void testSetCat_nombre_corto() throws DomainException {
+		cat.setCat_nombre(CAT_NOMBRE_2_CORTO);
+		assertEquals(CAT_NOMBRE_2_CORTO, cat.getCat_nombre());
+	}
+	
+	@Test (expected=DomainException.class)
+	public void testSetCat_nombre_largo() throws DomainException {
+		cat.setCat_nombre(CAT_NOMBRE_2_LARGO);
+		assertEquals(CAT_NOMBRE_2_LARGO, cat.getCat_nombre());
+	}
+	
 	@Test
 	public void testSetCat_descripcion() {
-		fail("Not yet implemented");
+		cat.setCat_descripcion(CAT_DESCRIPCION_2);
+		assertEquals(CAT_DESCRIPCION_2, cat.getCat_descripcion());
 	}
 
 }

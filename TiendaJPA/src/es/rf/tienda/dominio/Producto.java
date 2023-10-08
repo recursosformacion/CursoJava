@@ -34,12 +34,14 @@ public class Producto implements Serializable {
 	private String pro_uniVenta;
 	private Double pro_cantXUniVenta;
 	private String pro_uniUltNivel;
-	private int id_pais;
+	@ManyToOne(targetEntity = Pais.class, cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_pais")
+	private Pais dPais;
 	private String pro_usoRecomendado;
 
-	@ManyToOne(targetEntity = Categoria.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@ManyToOne(targetEntity = Categoria.class, cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_categoria")
-	private int id_categoria;
+	private Categoria dCategoria;
 
 	private int pro_stkReservado;
 	private int pro_nStkAlto;
@@ -134,16 +136,16 @@ public class Producto implements Serializable {
 		return pro_uniUltNivel;
 	}
 
-	public int getId_pais() {
-		return id_pais;
+	public Pais getdPais() {
+		return dPais;
 	}
 
 	public String getPro_usoRecomendado() {
 		return pro_usoRecomendado;
 	}
 
-	public int getId_categoria() {
-		return id_categoria;
+	public Categoria getdCategoria() {
+		return dCategoria;
 	}
 
 	public int getPro_stkReservado() {
@@ -293,16 +295,16 @@ public class Producto implements Serializable {
 		this.pro_uniUltNivel = pro_uniUltNivel;
 	}
 
-	public void setId_pais(int id_pais) {
-		this.id_pais = id_pais;
+	public void setdPais(Pais oPais) {
+		this.dPais = oPais;
 	}
 
 	public void setPro_usoRecomendado(String pro_usoRecomendado) {
 		this.pro_usoRecomendado = pro_usoRecomendado;
 	}
 
-	public void setId_categoria(int id_categoria) {
-		this.id_categoria = id_categoria;
+	public void setId_categoria(Categoria oCategoria) {
+		this.dCategoria = oCategoria;
 	}
 
 	public void setPro_stkReservado(int pro_stkReservado) {

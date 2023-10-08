@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="CursoJava">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/BancoWEB/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Curso-Patrones/src_01_singleton01"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Curso-Patrones/src_02_Factory"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Curso-Patrones/src_03_Observer"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Curso-Patrones/src_04_Adapter"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Curso-Patrones/src_05_Strategy"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Curso-Patrones/src_06_Decorator"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Curso/scrtest"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Curso/src/curso/g10/junit1"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/formulario1/src (1)/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/formulario1/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/mvc_FormHandling/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/servlets01/WebContent/WEB-INF/classes"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/servlets02/WebContent/WEB-INF/classes"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Tienda/test"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Tienda0/test"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Tienda2022/test"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/TiendaBase/test"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/TiendaJPA/test"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/TiendaJSP/test"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/TiendaJSP12/test"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/tiendaJunio/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/tiendaJunio/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Utilidades/scrtest"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Agroalimentaria/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/banco/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Clases/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Curso/scrtest/curso/g10/junit1/test"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Curso/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/errores/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Excepciones/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/GWT-Estilos/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/GWT-Formulario1/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/GWT-Manejador_clase_separada/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/GWT-Manejador_misma_clase/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/GWT-PrCliente/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Lista/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/LoginBeanMM/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/PrimerGWT/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/requestdispatcher/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/servlets03/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/servletsMVC/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Tienda/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Tienda0/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Tienda2022/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/TiendaBase/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/TiendaJPA/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/TiendaJSP/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/TiendaJSP12/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Utilidades/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/utilizacionXML/src"/>
+        <property name="context-root" value="CursoJava"/>
+        <property name="java-output-path" value="/CursoJava/Agroalimentaria/bin"/>
+    </wb-module>
+</project-modules>

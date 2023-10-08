@@ -8,7 +8,7 @@ public class pruebafecha {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 		System.out.println(df.format(Calendar.getInstance().getTime()));
 

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Agroalimentaria/src"/>
+	<classpathentry kind="src" path="banco/src"/>
+	<classpathentry kind="src" path="BancoWEB/src/main/java"/>
+	<classpathentry kind="src" path="Clases/src"/>
+	<classpathentry kind="src" path="Curso-Patrones/src_01_singleton01"/>
+	<classpathentry kind="src" path="Curso-Patrones/src_02_Factory"/>
+	<classpathentry kind="src" path="Curso-Patrones/src_03_Observer"/>
+	<classpathentry kind="src" path="Curso-Patrones/src_04_Adapter"/>
+	<classpathentry kind="src" path="Curso-Patrones/src_05_Strategy"/>
+	<classpathentry kind="src" path="Curso-Patrones/src_06_Decorator"/>
+	<classpathentry excluding="curso/g10/junit1/test/" kind="src" path="Curso/scrtest"/>
+	<classpathentry kind="src" path="Curso/scrtest/curso/g10/junit1/test"/>
+	<classpathentry excluding="curso/g10/junit1/" kind="src" path="Curso/src"/>
+	<classpathentry kind="src" path="Curso/src/curso/g10/junit1"/>
+	<classpathentry kind="src" path="errores/src"/>
+	<classpathentry kind="src" path="Excepciones/src"/>
+	<classpathentry kind="src" path="formulario1/src (1)/main/java"/>
+	<classpathentry kind="src" path="formulario1/src/main/java"/>
+	<classpathentry kind="src" path="GWT-Estilos/src"/>
+	<classpathentry kind="src" path="GWT-Formulario1/src"/>
+	<classpathentry kind="src" path="GWT-Manejador_clase_separada/src"/>
+	<classpathentry kind="src" path="GWT-Manejador_misma_clase/src"/>
+	<classpathentry kind="src" path="GWT-PrCliente/src"/>
+	<classpathentry kind="src" path="Lista/src"/>
+	<classpathentry kind="src" path="LoginBeanMM/src"/>
+	<classpathentry kind="src" path="mvc_FormHandling/src/main/java"/>
+	<classpathentry kind="src" path="PrimerGWT/src"/>
+	<classpathentry kind="src" path="requestdispatcher/src"/>
+	<classpathentry kind="src" path="servlets01/WebContent/WEB-INF/classes"/>
+	<classpathentry kind="src" path="servlets02/WebContent/WEB-INF/classes"/>
+	<classpathentry kind="src" path="servlets03/src"/>
+	<classpathentry kind="src" path="servletsMVC/src"/>
+	<classpathentry kind="src" path="Tienda/src"/>
+	<classpathentry kind="src" path="Tienda/test"/>
+	<classpathentry kind="src" path="Tienda0/src"/>
+	<classpathentry kind="src" path="Tienda0/test"/>
+	<classpathentry kind="src" path="Tienda2022/src"/>
+	<classpathentry kind="src" path="Tienda2022/test"/>
+	<classpathentry kind="src" path="TiendaBase/src"/>
+	<classpathentry kind="src" path="TiendaBase/test"/>
+	<classpathentry kind="src" path="TiendaJPA/src"/>
+	<classpathentry kind="src" path="TiendaJPA/test"/>
+	<classpathentry kind="src" path="TiendaJSP/src"/>
+	<classpathentry kind="src" path="TiendaJSP/test"/>
+	<classpathentry kind="src" path="TiendaJSP12/src"/>
+	<classpathentry kind="src" path="TiendaJSP12/test"/>
+	<classpathentry kind="src" path="tiendaJunio/src/main/java"/>
+	<classpathentry kind="src" path="tiendaJunio/src/test/java"/>
+	<classpathentry kind="src" path="Utilidades/scrtest"/>
+	<classpathentry kind="src" path="Utilidades/src"/>
+	<classpathentry kind="src" path="utilizacionXML/src"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/jsp-api-2.2.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/spring-aop-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/spring-beans-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/spring-context-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/spring-context-support-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/spring-core-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/spring-dao-2.0.8.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/spring-expression-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/spring-jdbc-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/spring-tx-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/spring-web-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/spring-webmvc-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="BancoWEB/src/main/webapp/WEB-INF/lib/standard-2.2.0.jar"/>
+	<classpathentry kind="lib" path="formulario1/src (1)/main/webapp/WEB-INF/lib/jsp-api-2.2.jar"/>
+	<classpathentry kind="lib" path="formulario1/src (1)/main/webapp/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="formulario1/src (1)/main/webapp/WEB-INF/lib/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="formulario1/src (1)/main/webapp/WEB-INF/lib/standard-2.2.0.jar"/>
+	<classpathentry kind="lib" path="formulario1/src/main/webapp/WEB-INF/lib/jsp-api-2.2.jar"/>
+	<classpathentry kind="lib" path="formulario1/src/main/webapp/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="formulario1/src/main/webapp/WEB-INF/lib/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="formulario1/src/main/webapp/WEB-INF/lib/standard-2.2.0.jar"/>
+	<classpathentry kind="lib" path="formulario1/target/classes/main/webapp (2)/WEB-INF/lib/jsp-api-2.2.jar"/>
+	<classpathentry kind="lib" path="formulario1/target/classes/main/webapp (2)/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="formulario1/target/classes/main/webapp (2)/WEB-INF/lib/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="formulario1/target/classes/main/webapp (2)/WEB-INF/lib/standard-2.2.0.jar"/>
+	<classpathentry kind="lib" path="formulario1/target/classes/main/webapp/WEB-INF/lib/jsp-api-2.2.jar"/>
+	<classpathentry kind="lib" path="formulario1/target/classes/main/webapp/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="formulario1/target/classes/main/webapp/WEB-INF/lib/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="formulario1/target/classes/main/webapp/WEB-INF/lib/standard-2.2.0.jar"/>
+	<classpathentry kind="lib" path="GWT-Estilos/war/WEB-INF/lib/gwt-servlet.jar"/>
+	<classpathentry kind="lib" path="GWT-Formulario1/war/WEB-INF/lib/commons-fileupload-1.0.jar"/>
+	<classpathentry kind="lib" path="GWT-Formulario1/war/WEB-INF/lib/commons-io-2.5-javadoc.jar"/>
+	<classpathentry kind="lib" path="GWT-Formulario1/war/WEB-INF/lib/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="GWT-Formulario1/war/WEB-INF/lib/gwt-servlet.jar"/>
+	<classpathentry kind="lib" path="GWT-Manejador_misma_clase/war/WEB-INF/lib/gwt-servlet.jar"/>
+	<classpathentry kind="lib" path="GWT-PrCliente/war/WEB-INF/lib/gwt-servlet.jar"/>
+	<classpathentry kind="lib" path="LoginBeanMM/WebContent/WEB-INF/lib/mysql-connector-java-5.1.36-bin.jar"/>
+	<classpathentry kind="lib" path="LoginDatabase/WebContent/WEB-INF/lib/mysql-connector-java-5.1.36-bin.jar"/>
+	<classpathentry kind="lib" path="PrimerGWT/war/WEB-INF/lib/gwt-servlet.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP/WebContent/WEB-INF/lib/geronimo-jta_1.1_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP/WebContent/WEB-INF/lib/hibernate-commons-annotations-5.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP/WebContent/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP/WebContent/WEB-INF/lib/jandex-2.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP/WebContent/WEB-INF/lib/javax.persistence_2.0.0.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP/WebContent/WEB-INF/lib/jboss-logging-3.3.0.Final.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP/WebContent/WEB-INF/lib/slf4j-api-1.7.14.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP/WebContent/WEB-INF/lib/slf4j-simple-1.7.14.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP12/WebContent/WEB-INF/lib/geronimo-jta_1.1_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP12/WebContent/WEB-INF/lib/hibernate-commons-annotations-5.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP12/WebContent/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP12/WebContent/WEB-INF/lib/jandex-2.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP12/WebContent/WEB-INF/lib/javax.persistence_2.0.0.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP12/WebContent/WEB-INF/lib/javax.servlet.jsp.jstl-api-1.2.1.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP12/WebContent/WEB-INF/lib/jboss-logging-3.3.0.Final.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP12/WebContent/WEB-INF/lib/slf4j-api-1.7.14.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP12/WebContent/WEB-INF/lib/slf4j-simple-1.7.14.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP12/WebContent/WEB-INF/lib/taglibs-standard-compat-1.2.5.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP12/WebContent/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP12/WebContent/WEB-INF/lib/taglibs-standard-jstlel-1.2.5.jar"/>
+	<classpathentry kind="lib" path="TiendaJSP12/WebContent/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/jsp-api-2.2.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/spring-aop-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/spring-beans-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/spring-context-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/spring-context-support-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/spring-core-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/spring-dao-2.0.8.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/spring-expression-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/spring-jdbc-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/spring-tx-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/spring-web-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/spring-webmvc-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tiendaJunio/src/main/webapp/WEB-INF/lib/standard-2.2.0.jar"/>
+	<classpathentry kind="lib" path="utilizacionXML/WebContent/WEB-INF/lib/javax.servlet.jsp.jstl-api-1.2.1.jar"/>
+	<classpathentry kind="lib" path="utilizacionXML/WebContent/WEB-INF/lib/jsp-api-2.2.jar"/>
+	<classpathentry kind="lib" path="utilizacionXML/WebContent/WEB-INF/lib/taglibs-standard-compat-1.2.5.jar"/>
+	<classpathentry kind="lib" path="utilizacionXML/WebContent/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar"/>
+	<classpathentry kind="lib" path="utilizacionXML/WebContent/WEB-INF/lib/taglibs-standard-jstlel-1.2.5.jar"/>
+	<classpathentry kind="lib" path="utilizacionXML/WebContent/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="output" path="Agroalimentaria/bin"/>
+</classpath>

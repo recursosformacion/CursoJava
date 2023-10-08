@@ -1,0 +1,27 @@
+
+java.util.Calendar aplazado(int dias) 
+Devuelve un Calendar con la fecha calculada desde hoy en el numero de dias indicados
+
+String calendar2String(java.util.Calendar cal)
+Recibe un objeto calendar y devuelve una String con formato DD/MM/YYYY
+
+int	distancia(java.util.Calendar dia1, java.util.Calendar dia2) 
+Indica el numero de dias que hay entre dos fechas (sin bisiestos)
+
+int	distanciaOK(java.util.Calendar f1, java.util.Calendar f2) 
+Indica el numero de dias que hay entre dos fechas (con bisiestos)
+
+boolean	filtrarFechaMax(java.util.Calendar fechaMax, java.lang.String fechaEntrada)
+Recibe una String con fecha en formato dd/mm/yyyy y comprueba que la fecha es correcta y
+ es inferior a la techa que indican como maxima
+ 
+boolean	filtrarFechaMin(java.util.Calendar fechaMin, java.lang.String fechaEntrada)
+Recibe una String con fecha en formato dd/mm/yyyy y comprueba que la fecha es correcta y
+ es superior a la techa que indican como minima
+ 
+java.lang.String	hoy() 
+Devuelve la fecha de hoy en formato largo :
+ddddddddd, dia de messssssss de 2016
+
+java.util.Calendar	string2Calendar(java.lang.String entrada)
+Recibe una string en formato dd/mm/yyyy y devuelve un calendar

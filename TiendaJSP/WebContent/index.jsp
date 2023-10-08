@@ -10,9 +10,9 @@
 <%@ include file="trozos/cabecera.jsp" %>
 
 <ul>
-<li><a href="listados/listadoCategoria.jsp">Gestion categorias</a></li>
-<li><a href="listados/listadoUsuarios.jsp">Gestion usuarios</a></li>
-<li><a href="listados/listadoProductos.jsp">Gestion productos</a></li>
+<li><a href="Categorias">Gestion categorias</a></li>
+<li><a href="Usuarios">Gestion usuarios</a></li>
+<li><a href="Productos">Gestion productos</a></li>
 
 
 

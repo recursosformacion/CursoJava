@@ -24,7 +24,7 @@ import es.rf.tienda.exception.DAOException;
 public class RFDataConnection {
 
 	/**
-	 * Variable para obtener la conexión
+	 * Variable para obtener la conexiï¿½n
 	 */
 	private static Connection conn;
 
@@ -34,7 +34,7 @@ public class RFDataConnection {
 	private final static String JDBC_DRIVER = "oracle.jdbc.driver.OracleDriver";
 
 	/**
-	 * Dirección de la BD
+	 * Direcciï¿½n de la BD
 	 */
 	private final static String URL = "jdbc:oracle:thin:@localhost:1521:xe";
 
@@ -46,20 +46,23 @@ public class RFDataConnection {
 	/**
 	 * Usuario para acceder a BD
 	 */
-	private final static String USUARIO = "\"alumno\"";
+	private final static String USUARIO = "alumno";
 
 	/**
 	 * Password para acceder a la BD
 	 */
-	private final static String PASSWORD = "Curso201601";
+	private final static String PASSWORD = "curso";
 
 	/**
 	 * Comando para utilizar
 	 */
 	private final static String SQL_USE = "USE ";
 
+	
+	private static String userACT = USUARIO;
+	private static String passACT = PASSWORD;
 	/**
-	 * Comando para la creación de una BD
+	 * Comando para la creaciï¿½n de una BD
 	 */
 	// private final static String SQL_CREATE = "CREATE DATABASE ";
 
@@ -67,42 +70,27 @@ public class RFDataConnection {
 	 * *************************************************************************
 	 * ************** NOMBRE: conectar *
 	 * 
-	 * DESCRIPCIÓN:
+	 * DESCRIPCIï¿½N:
 	 *//**
 		 * Se conecta a la base de datos indicada en el atributo DATABASE
 		 * 
 		 * @throws DAOException
-		 *             En caso que no logre la conexión con la BD
+		 *             En caso que no logre la conexiï¿½n con la BD
 		 */
-	/*
-	 * FECHA: Enero - 2016
-	 * 
-	 * AUTOR: Miguel Garcia
-	 * 
-	 **************************************************************************************/
-	public static void conectar() throws DAOException {
-		Statement stmt = null;
-		try {
-			stmt = conn.createStatement();
-			stmt.execute(SQL_USE + DATABASE);
-		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new DAOException("Error al conectar a la BD");
-		}
-	}
+	
 
 	/*
 	 * *************************************************************************
 	 * ************** NOMBRE: getConnection *
 	 * 
-	 * DESCRIPCIÓN:
+	 * DESCRIPCIï¿½N:
 	 *//**
 		 * Get connection a la BD
 		 * 
 		 * @return Un objeto Connection al servidor de la BD
 		 * 
 		 * @throws DAOException
-		 *             En caso que no se logre la conexión con la BD FECHA:
+		 *             En caso que no se logre la conexiï¿½n con la BD FECHA:
 		 *             Enero - 2016 AUTOR: Miguel Garcia
 		 * 
 		 **************************************************************************************/
@@ -112,44 +100,39 @@ public class RFDataConnection {
 			if (conn == null || conn.isClosed()) {
 				try {
 					Class.forName(JDBC_DRIVER);
-					// System.out.println("Se ha registrado el Driver
-					// correctamente");
 				} catch (ClassNotFoundException e) {
 					e.printStackTrace();
 				}
 
 				try {
 					conn = DriverManager.getConnection(URL, USUARIO, PASSWORD);
-					/// *******SOLO MYSQL *********** conectar();
-					// System.out.println("Se ha conectado correctamente a la
-					/// BD");
 					conn.setAutoCommit(false);
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}
 				if (conn != null) {
-					// System.out.println("Conexión al servidor lista para ser
-					// usada");
+					System.out.println("Conexiï¿½n al servidor lista para ser usada");
 				} else {
-					System.out.println("Conexión errorena");
+					System.out.println("Conexion erronea");
 					throw new DAOException("No se ha podido conectar con la BD");
 				}
 			}
 		} catch (SQLException e) {
-			System.out.println("Conexión erronea");
+			System.out.println("Conexion erronea");
 			throw new DAOException("No se ha podido conectar con la BD");
 		}
 
 		return conn;
 	}
+	
 
 	/*
 	 * *************************************************************************
 	 * ************** NOMBRE: closeConnection *
 	 * 
-	 * DESCRIPCIÓN:
+	 * DESCRIPCIï¿½N:
 	 *//**
-		 * Cierra la conexión a la BD
+		 * Cierra la conexiï¿½n a la BD
 		 * 
 		 * @throws DAOException,
 		 *             si existe cualquier error al acceder la BD FECHA: Enero -
@@ -164,8 +147,8 @@ public class RFDataConnection {
 				conn.close();
 			}
 		} catch (Exception e) {
-			System.out.println("No se ha podido cerrar la conexión a la BD");
-			throw new DAOException("Error al cerrar conexión a BD");
+			System.out.println("No se ha podido cerrar la conexiï¿½n a la BD");
+			throw new DAOException("Error al cerrar conexiï¿½n a BD");
 		} finally {
 			conn = null;
 		}
@@ -175,12 +158,12 @@ public class RFDataConnection {
 	 * *************************************************************************
 	 * ************** NOMBRE: commit *
 	 * 
-	 * DESCRIPCIÓN:
+	 * DESCRIPCIï¿½N:
 	 *//**
 		 * Commit connection
 		 * 
 		 * @param conn
-		 *            Objeto Commit contra el cual se realizará un commit
+		 *            Objeto Commit contra el cual se realizarï¿½ un commit
 		 * 
 		 * @throws DAOException,
 		 *             si existe cualquier error al acceder la BD FECHA: Enero -
@@ -204,12 +187,12 @@ public class RFDataConnection {
 	 * *************************************************************************
 	 * ************** NOMBRE: rollback *
 	 * 
-	 * DESCRIPCIÓN:
+	 * DESCRIPCIï¿½N:
 	 *//**
 		 * Rollback connection
 		 * 
 		 * @param conn
-		 *            Objeto Connection contra el cual se realizará un rollback
+		 *            Objeto Connection contra el cual se realizarï¿½ un rollback
 		 * 
 		 * @throws DAOException,
 		 *             si existe cualquier error al acceder la BD FECHA: Enero -
@@ -234,12 +217,12 @@ public class RFDataConnection {
 	 * *************************************************************************
 	 * ************** NOMBRE: closeStatement *
 	 * 
-	 * DESCRIPCIÓN:
+	 * DESCRIPCIï¿½N:
 	 *//**
 		 * Close preparedStatement
 		 * 
 		 * @param ps
-		 *            PreparedStatement que se cerrará
+		 *            PreparedStatement que se cerrarï¿½
 		 * 
 		 * @throws DAOException,
 		 *             si existe cualquier error al acceder la BD FECHA: Enero -
@@ -255,7 +238,7 @@ public class RFDataConnection {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new DAOException("No ha sido posible realizar operación close sobre elemento Statement");
+			throw new DAOException("No ha sido posible realizar operaciï¿½n close sobre elemento Statement");
 		}
 	}
 
@@ -266,7 +249,7 @@ public class RFDataConnection {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new DAOException("No ha sido posible realizar operación close sobre elemento Statement");
+			throw new DAOException("No ha sido posible realizar operaciï¿½n close sobre elemento Statement");
 		}
 	}
 
@@ -274,20 +257,19 @@ public class RFDataConnection {
 	 * *************************************************************************
 	 * ************** NOMBRE: closeResulSet *
 	 * 
-	 * DESCRIPCIÓN:
-	 *//**
-		 * Close preparedStatement
-		 * 
-		 * @param rs
-		 *            Resultset a cerrar
-		 * 
-		 * @throws DAOException,
-		 *             si existe cualquier error al acceder la BD FECHA: Enero -
-		 *             2016
-		 * 
-		 *             AUTOR: Miguel Garcia
-		 * 
-		 **************************************************************************************/
+	 * DESCRIPCIï¿½N:
+	 * Close preparedStatement
+	 * 
+	 * @param rs
+	 *            Resultset a cerrar
+	 * 
+	 * @throws DAOException,
+	 *             si existe cualquier error al acceder la BD FECHA: Enero -
+	 *             2016
+	 * 
+	 *             AUTOR: Miguel Garcia
+	 * 
+	 **************************************************************************************/
 	public static void closeResulSet(ResultSet rs) throws DAOException {
 		try {
 			if (rs != null) {
@@ -295,7 +277,7 @@ public class RFDataConnection {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new DAOException("No ha sido posible realizar operación close sobre elemento ResultSet");
+			throw new DAOException("No ha sido posible realizar operaciï¿½n close sobre elemento ResultSet");
 		}
 	}
 
@@ -307,7 +289,6 @@ public class RFDataConnection {
 			stm = conn.createStatement();
 			retorno = stm.executeUpdate(sql);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			throw (new DAOException("error en " + sql));
 		} finally {
@@ -325,7 +306,6 @@ public class RFDataConnection {
 			stm = conn.createStatement();
 			retorno = stm.executeQuery(sql);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			throw (new DAOException("error en " + sql));
 		} finally {
@@ -338,17 +318,41 @@ public class RFDataConnection {
 		String sql = "SELECT MAX(" + campo + ") FROM " + tabla;
 		ResultSet rs = ejecutarQuery(sql);
 		try {
-			if (!rs.first())
+			if /*(!rs.first())*/ (rs.next())
 				System.out.println("Tiene datos");
 			else
 				return 1;
-
+			//rs.next();
 			return rs.getInt(0) + 1;
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			throw new DAOException("Error buscando PK :" + sql);
 		}
 
+	}
+
+
+	public static String getUserACT() {
+		return userACT;
+	}
+
+
+	public static void setUserACT(String userACTn) {
+		userACT = userACTn;
+	}
+
+
+	public static String getPassACT() {
+		return passACT;
+	}
+
+
+	public static void setPassACT(String passACTn) {
+		passACT = passACTn;
+	}
+
+
+	public static String getPassword() {
+		return PASSWORD;
 	}
 }

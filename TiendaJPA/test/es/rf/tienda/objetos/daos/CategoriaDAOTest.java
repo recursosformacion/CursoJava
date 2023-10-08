@@ -12,9 +12,7 @@ import org.junit.Test;
 
 import es.rf.tienda.dominio.Categoria;
 import es.rf.tienda.exception.DAOException;
-import es.rf.tienda.interfaces.daos.CategoriaDAOH;
 import es.rf.tienda.util.HibernateUtil;
-import es.rf.tienda.util.RFDataConnection;
 
 public class CategoriaDAOTest {
 	Categoria cat;
@@ -45,6 +43,7 @@ public class CategoriaDAOTest {
 		String stringQuery = "DELETE FROM Categoria";
 		Query query = sesion.createQuery(stringQuery);
 		query.executeUpdate();
+		System.out.println("---------------------------------borrado");
 	}
 	
 	@Before
@@ -70,25 +69,41 @@ public class CategoriaDAOTest {
 		insertaCat();
 		cat.setCat_nombre(NOMBRE_1);
 		cat.setCat_descripcion(DESCRIPCION_1);
-		
-		
-		
+		cDAO.actualizarRegistro(cat);		
+		assertEquals(cat,cDAO.leerRegistro(cat));	
+	}
 
+	@Test (expected = DAOException.class)
+	public void testBorrar() throws DAOException {
+		insertaCat();
+		cDAO.borrarRegistro(cat);
+		cDAO.leerRegistro(cat);
 	}
 
 	@Test
-	public void testBorrar() {
-		fail("Not yet implemented");
+	public void testLeerTodos() throws DAOException {
+		int base = cDAO.leerTodos().size();
+		insertaCat();
+		insertaCat(); // consigo dos iguales;
+		Categoria cat2 = new Categoria();
+		cat2.setCat_nombre(NOMBRE_1);
+		cat2.setCat_descripcion(DESCRIPCION_1);
+		cDAO.insertarRegistro(cat2);
+		assertEquals(base + 3, cDAO.leerTodos().size());
+		
 	}
 
 	@Test
-	public void testLeerTodos() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testLeerVarios() {
-		fail("Not yet implemented");
+	public void testLeerVarios() throws DAOException {
+		insertaCat();
+		insertaCat(); // consigo dos iguales;
+		Categoria cat2 = new Categoria();
+		cat2.setCat_nombre(NOMBRE_1);
+		cat2.setCat_descripcion(DESCRIPCION_1);
+		cDAO.insertarRegistro(cat2);
+		cat.setId_categoria(0); //hago la busqueda por nombre
+		cat.setCat_descripcion("");
+		assertEquals(2, cDAO.leerRegistros(cat).size());
 	}
 
 	public void insertaCat() throws DAOException{
