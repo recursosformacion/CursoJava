@@ -1,4 +1,4 @@
-package curso.g09.complementos.p02.clases;
+package curso.gXX.complementos.p02.clases;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

@@ -11,7 +11,7 @@ public class LeerFichero {
 		// Path path =
 		// FileSystems.getDefault().getPath(carpeta, archivo);
 		// Scanner leerfichero = new Scanner(path);
-		File fichero = new File(carpeta + archivo);
+		File fichero = new File("D:\\RF_GIT\\git\\CursoJava\\Curso\\src\\curso\\g60\\scaners\\PruebasPaths.java");
 		try (Scanner leerfichero = new Scanner(fichero)) {
 			// en vez de utilizar nextLine, puedo...
 			leerfichero.useDelimiter("\n");

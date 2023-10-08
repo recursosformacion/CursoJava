@@ -20,7 +20,6 @@ public class GeneraNumero implements Runnable {
 					try {
 						buf.wait();
 					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				}

@@ -12,7 +12,6 @@ public class PruebaCliente {
 		
 		Usuario u1 = new Usuario("abcd", "Antonio", "123");
 		u1.setId(2);
-		u1.setRol(new Administrador());
 		imprimir(u1);
 		guardar(u1);
 		Usuario u2 = new Usuario("Pepito","khjkjhkj","kjhkjhkjh");
@@ -25,7 +24,7 @@ public class PruebaCliente {
 	}
 	private static void imprimir(Persona p){
 		System.out.println("La informacion solicitada es:");
-		System.out.println(p.aString());
+		System.out.println(p.toString());
 	}
 	private static void guardar(Salvable p){
 		p.salvar();

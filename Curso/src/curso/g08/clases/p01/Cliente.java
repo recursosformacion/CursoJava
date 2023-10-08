@@ -1,7 +1,7 @@
 package curso.g08.clases.p01;
 
 public class Cliente extends Persona
-implements Salvable{
+{
 	private int numero;
 	private String nif;
 	
@@ -23,20 +23,15 @@ implements Salvable{
 		this.nif = nif;
 	}
 	@Override
-	public String aString() {
-		// TODO Auto-generated method stub
+	public void salvar() {		
+		System.out.println("Cliente salvado");		
+	}
+	@Override
+	public void leer() {		
+		System.out.println("Cliente leido");		
+	}
+	@Override
+	public String toString() {
 		return "Cliente:" + getNif() + "-->" + getNombre();
-	}
-	@Override
-	public void salvar() {
-		// TODO Auto-generated method stub
-		System.out.println("Cliente salvado");
-		
-	}
-	@Override
-	public void leer() {
-		// TODO Auto-generated method stub
-		System.out.println("Cliente leido");
-		
 	}
 }

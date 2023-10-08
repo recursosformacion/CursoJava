@@ -1,11 +1,10 @@
 package curso.g08.clases.p01;
 
-public abstract class Persona {
+public abstract class Persona implements Salvable{
 	private int id;
 	private String nombre;
 	
-	
-	abstract String aString();
+	public abstract String toString();
 	
 	//Persona(){}
 	public Persona(String nombre){

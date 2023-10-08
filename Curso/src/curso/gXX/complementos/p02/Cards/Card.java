@@ -1,4 +1,4 @@
-package curso.g09.complementos.p02.Cards;
+package curso.gXX.complementos.p02.Cards;
 /*
  * Copyright (c) 1995, 2008, Oracle and/or its affiliates. All rights reserved.
  *

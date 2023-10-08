@@ -9,6 +9,6 @@ public interface Interface1 {
 		return a * 2;
 	}
 	public default String saluda() {
-		return "Hola, ¿que tal?";
+		return "Hola, Â¿que tal?";
 	}
 }

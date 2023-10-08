@@ -1,6 +1,6 @@
-package curso.g07.funciones.p03;
+package curso.g07.funciones.p05;
 
-import curso.utilidades.Consola;
+
 
 /*
  * Calcular el factorial de n recursivamente.
@@ -8,12 +8,10 @@ import curso.utilidades.Consola;
 public class FactorialRecursivo {
 
 	public static void main(String[] args) {
-		int num, resultado;
-		System.out.print("Introduzca el numero: ");
-		num = Consola.entero();
+		int num, resultado;		
+		num = 12;
 		resultado = factorial(num);
 		System.out.println(num + "! es igual a " + resultado);
-
 	}
 
 	static int factorial(int num) {
@@ -23,8 +21,8 @@ public class FactorialRecursivo {
 		else
 			res = num * factorial(num - 1); // n!= n*(n-1)*(n-2)... un ejemplo
 											// 3!=3*2*1
-		// también ocurre que n!=n*(n-1)!
-		// como ejemplo 4!=4*3!
+											// tambiÃ©n ocurre que n!=n*(n-1)!
+											// como ejemplo 4!=4*3*2*1!
 		return (res);
 	}
 }

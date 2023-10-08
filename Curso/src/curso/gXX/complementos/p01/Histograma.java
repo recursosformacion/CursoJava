@@ -1,4 +1,4 @@
-package curso.g09.complementos.p01;
+package curso.gXX.complementos.p01;
 /* 
  *  Se le pide al usuario cuantos numeros quiere entrar (entre 1 y 10) y se controla
  *  que no haya errores y se solicitan los numeros indicados, 
